@@ -26,7 +26,24 @@
     </div>
     
     <main>
-        <div class="image-container">Image 1</div>
+    <?php include 'php/conexion.php'; ?>
+    <table class="tablaprofes">
+        <th>(imagen)</th>
+        <th>Nombre</th>
+        <th>Estudios</th>
+        <th></th>
+
+        <?php
+        $selec=$con->query("SELECT * FROM profesores");
+        while ($fila = $selec -> fetch_assoc()){?>
+        <tr>
+          <td> <?php echo $fila['Apellido']?></td>
+          <td> <?php echo $fila['Nombre']?></td>
+          <td> <?php echo $fila['Estudios']?></td>
+          <td> <a href="profesores2.html">Presione para ver más</a></td>
+        </tr>
+        <?php } ?>
+      </table>
     </main>
     
     <footer class="secondary-footer">
@@ -34,7 +51,7 @@
     </footer>
     
     <footer class="main-footer">
-        <div>&copy; 2024 Instituto Mexicano de valores. Todos los derechos reservados.</div>
+        <div>&copy; 2023 Your Company Name. All rights reserved.</div>
         <div><a href="/privacy-policy">Privacy Policy</a></div>
     </footer>
 </body>
