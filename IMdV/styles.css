@@ -120,3 +120,9 @@ main {
   border: 1px solid #d09338;
   width: calc(100% - 20px);
 }
+
+.mainImage{
+  width: 95%;
+  height: auto;
+  
+}
