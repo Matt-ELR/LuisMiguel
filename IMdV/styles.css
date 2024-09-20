@@ -78,6 +78,19 @@ main {
   border: 1px solid #d09338;
 }
 
+.info{
+  width: calc(33.33% - 20px);
+  aspect-ratio: 1 / 1;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  border: 1px solid #d09338;
+}
+
 .secondary-footer {
   background-color: #d09338;
   color: #ffffff;
@@ -101,4 +114,9 @@ main {
 
 .main-footer a:hover {
   text-decoration: underline;
+}
+
+.tablaprofes{
+  border: 1px solid #d09338;
+  width: calc(100% - 20px);
 }
