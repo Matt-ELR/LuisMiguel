@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include('php/conexion.php');
 $usuario=$_POST['usuario'];
 $password=$_POST['password'];
 
