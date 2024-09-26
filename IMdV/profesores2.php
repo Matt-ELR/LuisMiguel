@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Profesores</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,15 +26,26 @@
     </div>
     
     <main>
-        <div class="image-container">
-            <img class="mainImage" src="Images/Imagen1.png" alt="Imagen temporal 1">
-        </div>
-        <div class="image-container">
-            <img class="mainImage" src="Images/imagen2.png" alt="Imagen temporal 2">
-        </div>
-        <div class="image-container">
-            <img class="mainImage" src="Images/imagen3.png" alt="Imagen temporal 3">
-        </div>
+        <?php include 'php/conexion.php'; ?>
+        <table class="tabla-profes">
+        <?php
+        $id=$_GET['ID'];
+        $selec=$con->query("SELECT * FROM profesores WHERE ID = '$id'");
+        while ($fila = $selec -> fetch_assoc()){?>
+        <tr>
+            <td class="profesor-info"> <?php echo '<img class="profesor-image" src="data:image/png;base64,'.base64_encode($fila['Imagen']).'" alt="Imagen del profesor" />'; ?></td>
+        </tr>
+        <tr>
+            <td class="profesor-info"> <?php echo $fila['Apellido']?></td>
+        </tr>
+        <tr>
+            <td class="profesor-info"> <?php echo $fila['Nombre']?></td>
+        </tr>
+        <tr>
+            <td class="profesor-info"> <?php echo $fila['Estudios']?></td>
+        </tr>  
+          <?php } ?>
+        </table>
     </main>
     
     <footer class="secondary-footer">

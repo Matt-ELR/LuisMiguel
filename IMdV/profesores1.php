@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Updated Webpage Template with External CSS</title>
+    <title>Profesores</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -40,7 +40,7 @@
           <td> <?php echo $fila['Apellido']?></td>
           <td> <?php echo $fila['Nombre']?></td>
           <td> <?php echo $fila['Estudios']?></td>
-          <td> <a href="profesores2.html">Presione para ver más</a></td>
+          <td> <a href ="profesores2.php?ID=<?php echo $fila['ID'] ?>">Ver informacion</a></td>
         </tr>
         <?php } ?>
       </table>
