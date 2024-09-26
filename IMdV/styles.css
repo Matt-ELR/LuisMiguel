@@ -18,8 +18,7 @@ body {
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  height: 150px;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -126,6 +125,45 @@ main {
   height: auto;
   
 }
+<<<<<<< HEAD
+
+
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 30px; 
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.text-content h1 {
+  font-size: 36px;
+  color: #00264d;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+=======
 
 .profesor-image {
   max-width: 35%;
@@ -148,3 +186,5 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+>>>>>>> 37984e3f5693356a5393bd4bd8cc97f6ab2382e7
