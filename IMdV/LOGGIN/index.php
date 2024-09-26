@@ -13,7 +13,7 @@
 <body>
     <div class="Caja">
    <form action="validar.php" method="post">
-   <h1 class="animate__animated animate__backInLeft">LOG IN sistema de administracion</h1>
+   <h1 class="animate__animated animate__backInLeft">SISTEMA DE ADMINISTRACION</h1>
    <p class="blanco">Usuario <input type="text" placeholder="ingrese su nombre" name="usuario"></p>
    <p class="blanco">Contraseña <input type="password" placeholder="ingrese su contraseña" name="password"></p>
    <input class="btn btn-success" type="submit" value="Ingresar">
