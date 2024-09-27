@@ -26,14 +26,16 @@
     </div>
     
     <main>
-        <?php include 'php/conexion.php'; ?>
+        <?php include 'php/conexion.php'; ?> <!-- Conecta a la base de datos -->
         <table class="tabla-profes">
         <?php
-        $id=$_GET['ID'];
-        $selec=$con->query("SELECT * FROM profesores WHERE ID = '$id'");
-        while ($fila = $selec -> fetch_assoc()){?>
+        $id=$_GET['ID']; //Consigue la info del profesor seleccionado en la pagina anterior
+        $selec=$con->query("SELECT * FROM profesores WHERE ID = '$id'"); //Selecciona la info de ese profesor y la filtra
+        while ($fila = $selec -> fetch_assoc()){?> <!-- Imprime la info del profesor -->
         <tr>
             <td class="profesor-info"> <?php echo '<img class="profesor-image" src="data:image/png;base64,'.base64_encode($fila['Imagen']).'" alt="Imagen del profesor" />'; ?></td>
+            <!--Dado que las imagenes se guardan en la base de datos mediante Base64, la linea anterior decodifica la imagen
+            Usando base 64-->
         </tr>
         <tr>
             <td class="profesor-info"> <?php echo $fila['Apellido']?></td>

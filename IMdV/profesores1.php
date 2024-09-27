@@ -26,7 +26,7 @@
     </div>
     
     <main>
-    <?php include 'php/conexion.php'; ?>
+    <?php include 'php/conexion.php'; ?> <!-- Conecta a la base de datos -->
     <table class="tablaprofes">
         <th>(imagen)</th>
         <th>Nombre</th>
@@ -34,15 +34,16 @@
         <th></th>
 
         <?php
-        $selec=$con->query("SELECT * FROM profesores");
-        while ($fila = $selec -> fetch_assoc()){?>
+        $selec=$con->query("SELECT * FROM profesores"); //Consigue la informacion de la tabla "Profesores"
+        while ($fila = $selec -> fetch_assoc()){?> <!--Mientras haya mas filas, repetira las siguientes lineas-->
         <tr>
-          <td> <?php echo $fila['Apellido']?></td>
-          <td> <?php echo $fila['Nombre']?></td>
-          <td> <?php echo $fila['Estudios']?></td>
-          <td> <a href ="profesores2.php?ID=<?php echo $fila['ID'] ?>">Ver informacion</a></td>
+          <td> <?php echo $fila['Apellido']?></td> <!-- Escribe la entrada N de la fila Apellido -->
+          <td> <?php echo $fila['Nombre']?></td>   <!-- Escribe la entrada N de la fila Nombre -->
+          <td> <?php echo $fila['Estudios']?></td> <!-- Escribe la entrada N de la fila Estudios -->
+          <td> <a href ="profesores2.php?ID=<?php echo $fila['ID'] ?>">Ver informacion</a></td> <!-- Añade un enlaze para
+            ver mas detalles de la entrada en cuestion -->
         </tr>
-        <?php } ?>
+        <?php } ?> <!--Cierra el bucle while -->
       </table>
     </main>
     

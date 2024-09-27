@@ -1,0 +1,17 @@
+profesores2.php{
+    <?php include 'php/conexion.php';
+        // Saca ID de la URL
+        $nReferencia = $_GET['nReferencia'];
+        // Selecciona la entrada de la ID
+        $selec = $con->query("SELECT * FROM profesores WHERE ID = '$nReferencia'");
+        // Revisa por entradas
+        if ($selec->num_rows > 0) {
+            // Muestra los resultados
+            while($fila = $selec->fetch_assoc()) {
+            echo "Nombre: " . $fila['Nombre'] . "<br>";
+            echo "Apellido: " . $fila['Apellido'] . "<br>";
+            echo "Estudios: " . $fila['Estudios'] . "<br>";
+            }
+        }   
+        ?>
+}
