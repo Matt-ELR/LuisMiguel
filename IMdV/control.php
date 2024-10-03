@@ -26,17 +26,8 @@
     </div>
     
 
-    
     <main>
-        <div class="image-container">
-            <img class="mainImage" src="Images/Imagen1.png" alt="Imagen temporal 1">
-        </div>
-        <div class="image-container">
-            <img class="mainImage" src="Images/imagen2.png" alt="Imagen temporal 2">
-        </div>
-        <div class="image-container">
-            <img class="mainImage" src="Images/imagen3.png" alt="Imagen temporal 3">
-        </div>
+        
     </main>
     
     <footer class="secondary-footer">

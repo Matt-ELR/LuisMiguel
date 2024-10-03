@@ -1,5 +1,5 @@
 <?php
-include('php/conexion.php');
+include('../php/conexion.php');
 $usuario=$_POST['usuario'];
 $password=$_POST['password'];
 
@@ -12,7 +12,7 @@ $filas=mysqli_num_rows($resultado);
 
 if($filas){
   
-    header("location:home.php");
+    header("location:../control.php");
 
 }else{
     ?>

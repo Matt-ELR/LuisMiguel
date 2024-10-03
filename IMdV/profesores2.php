@@ -35,7 +35,7 @@
         <tr>
             <td class="profesor-info"> <?php echo '<img class="profesor-image" src="data:image/png;base64,'.base64_encode($fila['Imagen']).'" alt="Imagen del profesor" />'; ?></td>
             <!--Dado que las imagenes se guardan en la base de datos mediante Base64, la linea anterior decodifica la imagen
-            Usando base 64-->
+            Usando Base64-->
         </tr>
         <tr>
             <td class="profesor-info"> <?php echo $fila['Apellido']?></td>
