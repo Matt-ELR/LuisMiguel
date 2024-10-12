@@ -1,0 +1,502 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado principal */
+.main-header {
+    background-color: #992a23;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+/* Estilo del logo */
+.logo {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Encabezado secundario */
+.secondary-header {
+    background-color: #d09338;
+    padding: 10px 0;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si es necesario */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efecto de transición para el hover */
+}
+
+nav ul li a:hover {
+    color: #d09338; /* Color en hover para un mejor efecto visual */
+}
+
+/* Estilo principal */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+}
+
+/* Estilo de tablas */
+.tablaprofes {
+    border: 1px solid #d09338;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tablaprofes th,
+.tablaprofes td {
+    padding: 10px;
+    border: 1px solid #d09338;
+    text-align: left;
+}
+
+/* Pie de página principal */
+.main-footer {
+    background-color: #992a23;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.main-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Efecto de transición para el hover */
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Botón */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d09338;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Efecto de transición en el hover */
+}
+
+.boton:hover {
+    background-color: #992a23;
+}
+
+/* Responsivo para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+    .main-header {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tablaprofes th,
+    .tablaprofes td {
+        font-size: 14px;
+    }
+
+    .tablaprofes img {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+}
+
+/* Responsivo para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .tablaprofes th,
+    .tablaprofes td {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .main-footer {
+        padding: 15px 10px;
+    }
+}
+
+
+/*css botones*
+/* editar */ 
+
+
+.edit-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none !important;
+  }
+  
+  .edit-svgIcon {
+    width: 17px;
+    transition-duration: 0.3s;
+  }
+  
+  .edit-svgIcon path {
+    fill: white;
+  }
+  
+  .edit-button:hover {
+    width: 120px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+  }
+  
+  .edit-button:hover .edit-svgIcon {
+    width: 20px;
+    transition-duration: 0.3s;
+    transform: translateY(60%);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  
+  .edit-button::before {
+    display: none;
+    content: "Edit";
+    color: white;
+    transition-duration: 0.3s;
+    font-size: 2px;
+  }
+  
+  .edit-button:hover::before {
+    display: block;
+    padding-right: 10px;
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(0px);
+    transition-duration: 0.3s;
+  }
+  
+  /*borrar*/
+  /* From Uiverse.io by vinodjangid07 */ 
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+  }
+  
+  .button:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(60%);
+  }
+  
+  .button::before {
+    position: absolute;
+    top: -20px;
+    content: "Delete";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+  }
+  
+  .button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+  }
+
+  /*boton ver*/
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(0, 0, 0);
+  }
+  
+  /* plus sign */
+  .svgWrapper {
+    width: 100%;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .svgIcon {
+    width: 17px;
+  }
+  
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: 0.3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+  }
+  
+  .Btn:hover .svgWrapper {
+    width: 30%;
+    transition-duration: 0.3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: 0.3s;
+    padding-right: 10px;
+  
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px, 2px);
+  }
+
+  /*boton agregar*/
+  /* From Uiverse.io by andrew-demchenk0 */ 
+.buttone {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+  }
+  
+  .buttone, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .buttone .button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .buttone .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttone .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .buttone:hover {
+    background: #34974d;
+  }
+  
+  .buttone:hover .button__text {
+    color: transparent;
+  }
+  
+  .buttone:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .buttone:active .button__icon {
+    background-color: #2e8644;
+  }
+  
+  .buttone:active {
+    border: 1px solid #2e8644;
+  }
+  
+
+  /*tabla*/
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fondo suave para el cuerpo */
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que los bordes redondeados se mantengan */
+}
+
+th, td {
+    padding: 15px; /* Espaciado interno en celdas */
+    text-align: left; /* Alineación del texto */
+    border: 1px solid #ccc; /* Bordes de celdas */
+}
+
+th {
+    background-color: #992a23; /* Color de fondo para encabezados */
+    color: white; /* Color del texto para encabezados */
+    font-size: 1.1em; /* Tamaño de fuente más grande para encabezados */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo alternativo para filas pares */
+}
+
+tr:hover {
+    background-color: rgba(153, 42, 35, 0.1); /* Efecto de hover para filas */
+}
+
+img {
+    width: 250px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10%; /* Bordes redondeados para las imágenes */
+}
+
+caption {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.5em; /* Tamaño del texto del título de la tabla */
+    color: #992a23; /* Color del título de la tabla */
+}
