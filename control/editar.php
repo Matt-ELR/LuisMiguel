@@ -1,5 +1,5 @@
 <?php
-include 'php/conexion.php'; // Conexión a la base de datos
+include 'conexion.php'; // Conexión a la base de datos
 
 // Obtener el ID del profesor
 $id = $_GET['ID'];
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ($con->query($update)) {
-        header("Location: profesores1.php");
+        header("Location: control.php");
     } else {
         echo "Error al actualizar el registro: " . $con->error;
     }

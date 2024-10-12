@@ -14,7 +14,7 @@
     </header>
 
     <main>
-        <?php include 'php/conexion.php'; ?> <!-- Conecta a la base de datos -->
+        <?php include 'conexion.php'; ?> <!-- Conecta a la base de datos -->
         
         <h2>Lista de Profesores</h2>
         <table class="tablaprofes">
@@ -23,6 +23,7 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Estudios</th>
+                <th>Informacion</th>
                 <th>Acciones</th>
             </tr>
 
@@ -34,14 +35,16 @@
                 <td><?php echo $fila['Nombre']; ?></td>
                 <td><?php echo $fila['Apellido']; ?></td>
                 <td><?php echo $fila['Estudios']; ?></td>
+                <td><?php echo $fila['informacion']; ?></td>
                 <td>
                     <a href="profesores2.php?ID=<?php echo $fila['ID']; ?>">Ver</a> |
                     <a href="editar.php?ID=<?php echo $fila['ID']; ?>">Editar</a> |
-                    <a href="php/borrar.php?ID=<?php echo $fila['ID']; ?>" onclick="return confirm('¿Seguro que deseas eliminar este registro?');">Borrar</a>
+                    <a href="borrar.php?ID=<?php echo $fila['ID']; ?>">Borrar</a>
                 </td>
             </tr>
             <?php } ?>
         </table>
+        <a href="agregar.php" class="boton">Agregar Nuevo Profesor</a>
     </main>
 
     <footer class="main-footer">
