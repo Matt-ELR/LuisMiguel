@@ -91,12 +91,55 @@ main {
   border: 1px solid #d09338;
 }
 
+
+
 .secondary-footer {
   background-color: #d09338;
   color: #ffffff;
-  padding: 10px 0;
+  padding: 20px;
+  font-size: 16px;
   text-align: center;
 }
+
+.secondary-footer h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-columns {
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-column {
+  width: 45%;
+}
+
+.contact-column p {
+  margin: 10px 0;
+}
+
+.contact-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-column a:hover {
+  text-decoration: underline;
+}
+
+.secondary-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.secondary-footer a:hover {
+  text-decoration: underline;
+}
+
+
 
 .main-footer {
   background-color: #992a23;

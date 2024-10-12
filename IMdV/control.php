@@ -47,7 +47,10 @@
         </tr>
         <?php } ?> <!--Cierra el bucle while -->
       </table>
-    <form action="php/nuevo.php" method="post">
+
+      <br><br>
+
+    <form action="php/profesores.php" method="post" enctype="multipart/form-data">
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="Nombre" placeholder="Nombre" required>
         <br><br>

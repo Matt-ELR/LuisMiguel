@@ -3,59 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de</title>
+    <title>Plantilla de Página Web - Instituto Mexicano de Valores</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="main-header">
         <div class="logo">
-            <img src="images/IMdV.jpeg" alt="Company Logo" width="80" height="80">
+            <a href="index.html">
+                <img src="images/IMdV.jpeg" alt="Logo del Instituto Mexicano de Valores" width="80" height="80">
+            </a>
         </div>
     </header>
     
-    <div class="secondary-header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="oferta.html">Oferta Educativa</a></li>
-                <li><a href="acercade.html">Acerca de nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="profesores1.php">Conoce a nuestros profesores</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="secondary-header">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="oferta.html">Oferta Educativa</a></li>
+            <li><a href="acercade.html">Acerca de Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="profesores1.php">Conoce a Nuestros Profesores</a></li>
+        </ul>
+    </nav>
     
     <main>
-        <div class="content-container">
-            <div class="text-content">
-                <h1>¿Quienes somos?</h1>
-                <p>Somos una universidad con una educación integral basada en principios y valores, formando a los líderes del futuro.</p>
-            
-            <div class="image-content">
-                <img src="Images/Imagen1.png" alt="Educación de calidad" width="900" height="auto">
-            </div>
+        <section class="content-container">
+            <article class="text-content">
+                <h1>¿Quiénes somos?</h1>
+                <p>Somos una universidad que brinda una educación integral basada en principios y valores, formando a los líderes del futuro.</p>
+            </article>
+
+            <figure class="image-content">
+                <img src="images/Imagen1.png" alt="Educación de calidad" width="900" height="auto">
+            </figure>
+
+            <article class="text-content">
                 <h1>¿Qué ofrecemos?</h1>
-                <p>Ofrecemos estudios para cuatro licenciaturas y una maestría, éstas son:</p>
+                <p>Ofrecemos estudios para cuatro licenciaturas y una maestría. Estas son:</p>
                 <ul>
                     <li>Administración</li>
                     <li>Criminología</li>
                     <li>Derecho</li>
-                    <li>Psicología</li> <br>
-                    <li>---[MAESTRÍAS]---</li>
-                    <li>Inovacion docente</li>
-                    <li>Gestion educativa</li>
+                    <li>Psicología</li>
                 </ul>
-            </div>
-        </div>
+            </article>
+        </section>
     </main>
     
     <footer class="secondary-footer">
-        <p>[Info]</p>
+        <h2>Contáctanos</h2>
+        <div class="contact-columns">
+            <div class="contact-column">
+                <p><strong>Email:</strong> <a href="mailto:imvuniversidad@gmail.com">imvuniversidad@gmail.com</a></p>
+                <p><strong>Facebook:</strong> <a href="https://facebook.com/institutovalores" target="_blank">Instituto Mexicano de Valores</a></p>
+            </div>
+            <div class="contact-column">
+                <p><strong>Teléfono:</strong> +52 281 392 9282</p>
+                <p><strong>Dirección:</strong> Libramiento IPN S/N, Tlaxcala, México.</p>
+            </div>
+        </div>
     </footer>
     
+    
     <footer class="main-footer">
-        <div>&copy; 2024 Instituto Mexicano de valores. Todos los derechos reservados.</div>
-        <div><a href="/privacy-policy">Politica de privacidad</a></div>
+        <div>&copy; 2024 Instituto Mexicano de Valores. Todos los derechos reservados.</div>
+        <div><a href="/privacy-policy">Política de privacidad</a></div>
     </footer>
 </body>
 </html>
