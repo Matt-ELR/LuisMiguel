@@ -28,15 +28,45 @@
 
     
     <main>
-        <div class="image-container">
-            <img class="mainImage" src="Images/Imagen1.png" alt="Imagen temporal 1">
+        
+        <div class="carousel-container">
+            <img src="images/Imagen1.png" alt="Imagen 1" class="carousel-item active">
+            <img src="images/imagen3.png" alt="Imagen 2" class="carousel-item right">
+            <img src="images/imagen2.png" alt="Imagen 3" class="carousel-item left">
         </div>
-        <div class="image-container">
-            <img class="mainImage" src="Images/imagen2.png" alt="Imagen temporal 2">
-        </div>
-        <div class="image-container">
-            <img class="mainImage" src="Images/imagen3.png" alt="Imagen temporal 3">
-        </div>
+
+        <script>
+            let currentIndex = 0;
+            const items = document.querySelectorAll('.carousel-item');
+            const totalItems = items.length;
+
+            function updateCarousel() {
+            
+                items.forEach(item => item.classList.remove('active', 'left', 'right'));
+
+       
+                const prevIndex = (currentIndex - 1 + totalItems) % totalItems;
+                const nextIndex = (currentIndex + 1) % totalItems;
+
+           
+                items[currentIndex].classList.add('active');
+                items[prevIndex].classList.add('left');
+                items[nextIndex].classList.add('right');
+            }
+
+            function navigate(direction) {
+               
+                currentIndex = (currentIndex + direction + totalItems) % totalItems;
+                updateCarousel();
+            }
+
+            setInterval(() => {
+                navigate(1);
+            }, 3000);
+
+         
+            updateCarousel();
+        </script>    
     </main>
     
     <footer class="secondary-footer">
