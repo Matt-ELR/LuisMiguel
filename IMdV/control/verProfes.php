@@ -173,8 +173,8 @@
 <body>
     <header class="main-header">
         <div class="logo">
-        <a href="index.php">
-                <img src="images/logo.png" alt="Logo del Instituto Mexicano de Valores">
+        <a href="../index.html">
+                <img src="../images/logo.png" alt="Logo del Instituto Mexicano de Valores">
             </a>
         </div>
     </header>
@@ -182,7 +182,7 @@
     <div class="secondary-header">
         <nav>
             <ul>
-                <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="oferta.html">Oferta Educativa</a></li>
                 <li><a href="acercade.html">Acerca de nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -193,10 +193,10 @@
     </div>
     
     <main>
-        <button class="back-button" onclick="window.location.href='profesores1.php'" aria-label="Volver a la página de profesores">
+        <button class="back-button" onclick="window.location.href='control.php'" aria-label="Volver">
             Volver a profesores
         </button>
-        <?php include 'php/conexion.php'; ?>
+        <?php include '../php/conexion.php'; ?>
         <table class="tabla-profes">
         <?php
         $id=$_GET['ID'];

@@ -5,14 +5,14 @@ $password=$_POST['password'];
 
 
 
-$consulta="SELECT*FROM usuarios where usuario='$usuario' and password='$password'";
-$resultado=mysqli_query($conexion,$consulta);
+$query="SELECT*FROM usuarios where usuario='$usuario' and password='$password'";
+$resultado=mysqli_query($con,$query);
 
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
   
-    header("location:../control.php");
+    header("location:../control/control.php");
 
 }else{
     ?>

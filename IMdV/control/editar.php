@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php'; // Conexión a la base de datos
+include '../php/conexion.php'; // Conexión a la base de datos
 
 // Obtener el ID del profesor
 $id = $_GET['ID'];
@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo "Error al actualizar el registro: " . $con->error;
     }
+    $con->close();
 }
 ?>
 
@@ -59,5 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         <input type="submit" value="Guardar cambios">
     </form>
+    <
+   <center> <a href="control.php" class="btn-regresar">cancelar</a></center>
 </body>
 </html>

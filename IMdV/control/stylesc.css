@@ -20,20 +20,20 @@ body {
 
 /* Estilo del logo */
 .logo {
-    width: 80px;
-    height: 80px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    overflow: hidden;
+  width: 150px;
+  height: 80px;
+  border: 1px solid #992a23;
+  padding: 20px;
+  text-align: center;
+  background-color: #992a23;
 }
 
 .logo img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+max-width: 125%;
+max-height: 1250%;
+object-fit: cover;
+border-radius: 10px;
+transform: scale(1.2);
 }
 
 /* Encabezado secundario */
@@ -266,7 +266,6 @@ main {
   }
   
   /*borrar*/
-  /* From Uiverse.io by vinodjangid07 */ 
 .button {
     width: 50px;
     height: 50px;
@@ -338,7 +337,7 @@ main {
     overflow: hidden;
     transition-duration: 0.3s;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(20, 20, 20);
   }
   
   /* plus sign */
@@ -391,7 +390,6 @@ main {
   }
 
   /*boton agregar*/
-  /* From Uiverse.io by andrew-demchenk0 */ 
 .buttone {
     position: relative;
     width: 150px;
@@ -499,4 +497,29 @@ caption {
     font-weight: bold;
     font-size: 1.5em; /* Tamaño del texto del título de la tabla */
     color: #992a23; /* Color del título de la tabla */
+}
+
+
+/*regresar*/
+/* Estilos del botón para regresar a Inicio */
+.btn-regresar {
+  display: inline-block;
+  background-color: #34974d;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 20px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 5%;
+}
+
+.btn-regresar:hover {
+  background-color: #34974d;
+  transform: scale(1.05);
+}
+
+.btn-regresar:active {
+  transform: scale(0.98);
 }

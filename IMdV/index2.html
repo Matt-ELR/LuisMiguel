@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profesores</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="main-header">
         <div class="logo">
-        <a href="index.php">
+            <a href="index.html">
                 <img src="images/logo.png" alt="Logo del Instituto Mexicano de Valores">
             </a>
         </div>
@@ -18,7 +18,7 @@
     <div class="secondary-header">
         <nav>
             <ul>
-                <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="oferta.html">Oferta Educativa</a></li>
                 <li><a href="acercade.html">Acerca de nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -28,26 +28,48 @@
         </nav>
     </div>
     
-    <main>
-    <?php include 'php/conexion.php'; ?> <!-- Conecta a la base de datos -->
-    <table class="tablaprofes">
-    <th>Nombre</th>
-    <th>Estudios</th>
-    <th></th>
 
-    <?php
-    $selec = $con->query("SELECT * FROM profesores"); // Get information from the "Profesores" table
-    while ($fila = $selec->fetch_assoc()) { ?> <!-- While there are more rows, repeat the following lines -->
-        <tr>
-            <td><?php echo $fila['Nombre'] . ' ' . $fila['Apellido']; ?></td> <!-- Concatenate Nombre and Apellido -->
-            <td><?php echo $fila['Estudios']; ?></td> <!-- Write the entry N of the Estudios row -->
-            <td><a href="profesores2.php?ID=<?php echo $fila['ID']; ?>">Ver informacion</a></td> <!-- Link to see more details -->
-        </tr>
-    <?php } 
-    $con->close();
-    ?>
     
-</table>
+    <main>
+        
+        <div class="carousel-container">
+            <img src="images/Imagen1.png" alt="Imagen 1" class="carousel-item active" height="100px">
+            <img src="images/imagen3.png" alt="Imagen 2" class="carousel-item right" height="100px">
+            <img src="images/imagen2.png" alt="Imagen 3" class="carousel-item left" height="100px">
+        </div>
+
+        <script>
+            let currentIndex = 0;
+            const items = document.querySelectorAll('.carousel-item');
+            const totalItems = items.length;
+
+            function updateCarousel() {
+            
+                items.forEach(item => item.classList.remove('active', 'left', 'right'));
+
+       
+                const prevIndex = (currentIndex - 1 + totalItems) % totalItems;
+                const nextIndex = (currentIndex + 1) % totalItems;
+
+           
+                items[currentIndex].classList.add('active');
+                items[prevIndex].classList.add('left');
+                items[nextIndex].classList.add('right');
+            }
+
+            function navigate(direction) {
+               
+                currentIndex = (currentIndex + direction + totalItems) % totalItems;
+                updateCarousel();
+            }
+
+            setInterval(() => {
+                navigate(1);
+            }, 3000);
+
+         
+            updateCarousel();
+        </script>    
     </main>
     
     <footer class="secondary-footer">
@@ -66,6 +88,7 @@
     
     <footer class="main-footer">
         <div>&copy; 2024 Instituto Mexicano de valores. Todos los derechos reservados.</div>
+        <div><a href="/privacy-policy">Politica de privacidad</a></div>
     </footer>
 </body>
 </html>

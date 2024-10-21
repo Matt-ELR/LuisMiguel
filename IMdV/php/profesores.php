@@ -19,3 +19,4 @@ if($insert){
     location.href='../control.php';
     </script>";
 }
+$con->close();

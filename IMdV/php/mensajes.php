@@ -16,3 +16,4 @@ if($insert){
     location.href='../contacto.html';
     </script>";
 }
+$con->close();

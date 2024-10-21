@@ -12,4 +12,5 @@ if ($del) {
     location.href='../control.php';
     </script>";
 }
+$con->close();
 ?>

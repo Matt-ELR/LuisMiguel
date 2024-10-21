@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php'; // Conexión a la base de datos
+include '../php/conexion.php'; // Conexión a la base de datos
 
 // Si se ha enviado el formulario de agregar
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Error al agregar el registro: " . $con->error;
     }
 }
+$con->close();
 ?>
 
 <!DOCTYPE html>

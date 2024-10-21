@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+include '../php/conexion.php';
 
 $id = $_GET['ID'];
 
@@ -18,3 +18,4 @@ if($con->query($delete)){
     </script>
     ";
 }
+$con->close();

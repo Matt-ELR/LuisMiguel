@@ -5,28 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="stylesc.css">
+    <script src="../Javascript.js"></script>
 </head>
 <body>
     <header class="main-header">
         <div class="logo">
-            <img src="images/logo.png" alt="Company Logo" width="80" height="80">
+        <a href="../index.php">
+                <img src="../images/logo.png" alt="Logo del Instituto Mexicano de Valores">
+            </a>
         </div>
     </header>
     
     <div class="secondary-header">
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="oferta.html">Oferta Educativa</a></li>
-                <li><a href="acercade.html">Acerca de nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="profesores1.php">Conoce a nuestros profesores</a></li>
+                <li><a href="../index.php">Inicio</a></li>
+                <li><a href="../oferta.html">Oferta Educativa</a></li>
+                <li><a href="../acercade.html">Acerca de nosotros</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+                <li><a href="../profesores1.php">Conoce a nuestros profesores</a></li>
             </ul>
         </nav>
     </div>
 
     <main>
-        <?php include 'conexion.php'; ?> <!-- Conecta a la base de datos -->
+        <?php include '../php/conexion.php'; ?> <!-- Conecta a la base de datos -->
         
         <h2>Lista de Profesores</h2>
         <table class="tablaprofes">
@@ -49,7 +52,7 @@
                 <td><?php echo $fila['Estudios']; ?></td>
                 <td><?php echo $fila['informacion']; ?></td>
                 <td>
-                    <form action="profesores2.php" method="get" style="display:inline;">
+                    <form action="verProfes.php" method="get" style="display:inline;">
                         <input type="hidden" name="ID" value="<?php echo $fila['ID']; ?>"> <br>
                         <button class="Btn">
   <div type="submit" class="svgWrapper">
@@ -97,19 +100,31 @@
                     </form>
                 </td>
             </tr>
-            <?php } ?>
+            <?php } 
+            $con->close();
+            ?>
         </table>
         <form action="agregar.php" method="get">
         <button type="submit" class="buttone">
-  <span class="button__text">Añadir</span>
+  <span class="button__text">Añadir docente</span>
   <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
 </button>
+        </form>
+        <label for="btnMensajes"></label>
+        <form action="mensajes.php" method="get" id="btnMensajes">
+        <button type="submit" class="buttone">
+  <span class="button__text">Revisar mensajes</span>
+  
+</button><br><br><center>
+<a href="editarcarrusel.php">Actualizar carrusel</a>
+</center>
+
         </form>
     </main>
 
     <footer class="main-footer">
         <div>&copy; 2024 Instituto Mexicano de valores. Todos los derechos reservados.</div>
-        <div><a href="/privacy-policy">Política de privacidad</a></div>
+        
     </footer>
 </body>
 </html>
