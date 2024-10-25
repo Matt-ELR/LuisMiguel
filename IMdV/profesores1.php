@@ -36,12 +36,12 @@
     <th></th>
 
     <?php
-    $selec = $con->query("SELECT * FROM profesores"); // Get information from the "Profesores" table
-    while ($fila = $selec->fetch_assoc()) { ?> <!-- While there are more rows, repeat the following lines -->
+    $selec = $con->query("SELECT * FROM profesores"); 
+    while ($fila = $selec->fetch_assoc()) { ?> 
         <tr>
-            <td><?php echo $fila['Nombre'] . ' ' . $fila['Apellido']; ?></td> <!-- Concatenate Nombre and Apellido -->
-            <td><?php echo $fila['Estudios']; ?></td> <!-- Write the entry N of the Estudios row -->
-            <td><a href="profesores2.php?ID=<?php echo $fila['ID']; ?>">Ver informacion</a></td> <!-- Link to see more details -->
+            <td><?php echo $fila['Nombre'] . ' ' . $fila['Apellido']; ?></td> 
+            <td><?php echo $fila['Estudios']; ?></td> 
+            <td><a href="profesores2.php?ID=<?php echo $fila['ID']; ?>">Ver informacion</a></td> 
         </tr>
     <?php } 
     $con->close();

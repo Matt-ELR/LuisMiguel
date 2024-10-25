@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Redirigir para evitar reenvíos al refrescar la página
     header("Location: control.php");
+    $con->close();
     exit();
 }
 ?>
